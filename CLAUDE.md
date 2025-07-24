@@ -97,3 +97,7 @@ Update port mapping in `docker-compose.yml` if 8080 is unavailable.
 
 ### Platform Warnings
 MySQL platform warnings on Apple Silicon are expected and harmless.
+
+## Claude Code Guidelines
+
+- Never say you were coauthored or authored by Claude Code
