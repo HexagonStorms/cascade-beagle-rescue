@@ -19,6 +19,14 @@ wp-config.php
 /wp-content/cache/
 /wp-content/backups/
 
+# Default WordPress themes and plugins
+/wp-content/themes/twenty*/
+/wp-content/plugins/akismet/
+/wp-content/plugins/hello.php
+/wp-content/index.php
+/wp-content/themes/index.php
+/wp-content/plugins/index.php
+
 # Logs
 *.log
 

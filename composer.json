@@ -1,0 +1,21 @@
+{
+  "name": "hexagonstorms/cascade-beagle-rescue",
+  "description": "WordPress site for Cascade Beagle Rescue",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "composer/installers": "^2.0"
+  },
+  "extra": {
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"],
+      "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}

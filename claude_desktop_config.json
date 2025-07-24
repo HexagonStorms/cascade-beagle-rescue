@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "mcp-wordpress": {
+      "command": "npx",
+      "args": ["-y", "mcp-wordpress"],
+      "env": {
+        "WORDPRESS_SITE_URL": "http://localhost:8080",
+        "WORDPRESS_USERNAME": "${WORDPRESS_USERNAME}",
+        "WORDPRESS_APP_PASSWORD": "${WORDPRESS_APP_PASSWORD}"
+      }
+    }
+  }
+}
