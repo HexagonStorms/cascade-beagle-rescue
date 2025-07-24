@@ -1,0 +1,27 @@
+# Environment
+.env
+
+# WordPress core files
+/wp-admin/
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Configuration
+wp-config.php
+
+# Content directories
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/backups/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
