@@ -1,5 +1,6 @@
 # Environment
 .env
+claude_desktop_config.json
 
 # WordPress core files
 /wp-admin/
