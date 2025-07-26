@@ -28,6 +28,9 @@ wp-config.php
 /wp-content/themes/index.php
 /wp-content/plugins/index.php
 
+# Composer
+/vendor/
+
 # Logs
 *.log
 
