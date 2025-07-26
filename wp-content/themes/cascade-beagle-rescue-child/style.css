@@ -1,0 +1,59 @@
+/*
+Theme Name: Cascade Beagle Rescue Child
+Template: twentytwentyfive
+Description: Child theme for Cascade Beagle Rescue with flexible color system and custom branding
+Version: 1.0.0
+Author: Josh Plaza
+Text Domain: cascade-beagle-rescue-child
+*/
+
+/* Custom properties for flexible color scheme */
+:root {
+  --rescue-primary: #2d8f47;     /* Default green, easily changeable */
+  --rescue-secondary: #4a90a4;   /* Complementary blue */
+  --rescue-accent: #f39c12;      /* Warm accent color */
+  --rescue-text: #333333;        /* Main text color */
+  --rescue-text-light: #666666;  /* Secondary text */
+  --rescue-background: #ffffff;  /* Background color */
+  --rescue-background-alt: #f8f9fa; /* Alternate background */
+}
+
+/* Logo placeholder system */
+.custom-logo img {
+  max-height: 80px;
+  width: auto;
+}
+
+/* Custom rescue-specific styles */
+.rescue-cta {
+  background-color: var(--rescue-primary);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.rescue-cta:hover {
+  background-color: var(--rescue-secondary);
+  color: white;
+}
+
+.rescue-highlight {
+  color: var(--rescue-primary);
+  font-weight: bold;
+}
+
+/* Dog adoption card styles */
+.dog-card {
+  background: var(--rescue-background-alt);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.dog-card:hover {
+  transform: translateY(-2px);
+}
