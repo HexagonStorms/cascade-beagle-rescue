@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   wordpress:
-    image: wordpress:cli
+    image: wordpress:latest
     ports:
       - "8080:80"
     environment:

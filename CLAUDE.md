@@ -30,10 +30,15 @@ docker-compose logs -f wordpress
 # Access WordPress container shell
 docker exec -it cascade-beagle-rescue-wordpress-1 bash
 
-# Use WP-CLI commands
-docker exec cascade-beagle-rescue-wordpress-1 wp --help
-docker exec cascade-beagle-rescue-wordpress-1 wp theme list
-docker exec cascade-beagle-rescue-wordpress-1 wp post create --post_title="Title" --post_content="Content"
+# Use WP-CLI commands (secure - runs as www-data user)
+# Full command format:
+docker exec cascade-beagle-rescue-wordpress-1 su -s /bin/bash www-data -c "wp --help --path=/var/www/html"
+docker exec cascade-beagle-rescue-wordpress-1 su -s /bin/bash www-data -c "wp theme list --path=/var/www/html"
+docker exec cascade-beagle-rescue-wordpress-1 su -s /bin/bash www-data -c "wp post create --post_title='Title' --post_content='Content' --path=/var/www/html"
+
+# For convenience, create an alias:
+# alias wp-rescue='docker exec cascade-beagle-rescue-wordpress-1 su -s /bin/bash www-data -c'
+# Then use: wp-rescue "wp theme list --path=/var/www/html"
 
 # Access MySQL database
 docker exec -it cascade-beagle-rescue-db-1 mysql -u wordpress -p
