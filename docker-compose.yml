@@ -10,7 +10,14 @@ services:
       WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
-      WORDPRESS_CONFIG_EXTRA: ${WORDPRESS_CONFIG_EXTRA}
+      WORDPRESS_CONFIG_EXTRA: |
+        define( 'WP_ENVIRONMENT_TYPE', 'local' );
+        
+        // JWT Authentication Configuration
+        define('JWT_AUTH_SECRET_KEY', '${JWT_AUTH_SECRET_KEY}');
+        define('JWT_AUTH_CORS_ENABLE', ${JWT_AUTH_CORS_ENABLE});
+        
+        // Add more custom configurations here as needed
     volumes:
       - wordpress_data:/var/www/html
       - ./wp-content:/var/www/html/wp-content
